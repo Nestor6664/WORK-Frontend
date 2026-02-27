@@ -1,0 +1,427 @@
+/* ========================================
+   RESET AND BASE STYLES
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* ========================================
+   HEADER SECTION
+   ======================================== */
+
+header {
+  background-color: #1a4d80;
+  color: white;
+  padding: 15px 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: #ffd700;
+}
+
+/* Header links (Find Us, Sign in) */
+.header-links {
+  display: flex;
+  gap: 20px;
+}
+
+.header-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+.header-links a:hover {
+  background-color: #2d5f99;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  width: 250px;
+}
+
+.search-box button {
+  padding: 5px 14px;
+  border: none;
+  background-color: #ffd700;
+  color: #1a4d80;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-box button:hover {
+  background-color: #da890f;
+  transition: all 0.3s ease;  
+}
+
+/* ========================================
+   MAIN NAVIGATION - FIXED
+   ======================================== */
+
+.main-nav {
+  background-color: #2d5f99;
+  width: 100%;
+  position: fixed;
+  top: 70px;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.main-nav li {
+  margin: 0;
+}
+
+.main-nav a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Navigation hover effect */
+.main-nav a:hover {
+  background-color: #ffd700;
+  color: #1a4d80;
+  border-radius: 8px;
+}
+
+/* ========================================
+   MAIN CONTENT SECTION
+   ======================================== */
+
+main {
+  margin-top: 130px; /* Space for fixed header and nav */
+  min-height: calc(100vh - 400px);
+  padding: 40px 0;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Featured Destination Section */
+.featured-destination {
+  margin-bottom: 50px;
+}
+
+.featured-destination h1 {
+  color: #1a4d80;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.destination-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.destination-image {
+  width: 100%;
+  height: 300px;
+  background-color: #e0e0e0;
+  overflow: hidden;
+}
+
+.destination-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.destination-info {
+  padding: 30px;
+}
+
+.destination-info h2 {
+  color: #1a4d80;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.destination-info p {
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* Call to Action Button */
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ff6b35;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff8c5a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Promotions Section */
+.promotions {
+  margin-bottom: 50px;
+}
+
+.promotions h2 {
+  color: #1a4d80;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.promo-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-left: 4px solid #ffd700;
+}
+
+.promo-card h3 {
+  color: #1a4d80;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.promo-card p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.promo-link {
+  color: #ff6b35;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.promo-link:hover {
+  text-decoration: underline;
+  color: #ff8c5a;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: #1a4d80;
+  color: white;
+  padding: 50px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cta-section h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.cta-section p {
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.cta-button-large {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #ffd700;
+  color: #1a4d80;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.cta-button-large:hover {
+  background-color: #ffed4e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ========================================
+   FOOTER SECTION
+   ======================================== */
+
+footer {
+  background-color: #2d2d2d;
+  color: white;
+  width: 100%;
+  padding: 40px 0 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-section h3 {
+  color: #ffd700;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* App links */
+.app-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-link {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.app-link img {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for app links */
+.app-link:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* Footer navigation links */
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Footer links hover effect (different from main nav) */
+.footer-links a:hover {
+  color: #ffd700;
+  padding-left: 5px;
+}
+
+/* Social Media Icons */
+.social-media {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Social media hover effect - opacity */
+.social-icon:hover {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+/* Copyright section */
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+}
+
+.copyright p {
+  color: #cccccc;
+  font-size: 14px;
+}
